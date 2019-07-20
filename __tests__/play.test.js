@@ -1,5 +1,4 @@
 import {Requests} from '../src/play';
-import { JestEnvironment } from '@jest/environment';
 
 describe('play function', () => {
     describe('Player 1 wins', () => {
