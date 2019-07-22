@@ -6,6 +6,8 @@ describe('play function', () => {
             player1Wins() { console.log("player1Wins"); },
         };
         beforeEach(() => {
+            // observer patternを適用して、当該のメソッドが呼ばれることを
+            // 確認する
             jest.spyOn(observer, 'player1Wins').mockImplementation();
         });
 
