@@ -19,7 +19,7 @@ describe('play function', () => {
 
     describe('Player 2 wins', () => {
         const observer = {
-            player1Wins() { console.log("player2Wins"); },
+            player2Wins() { console.log("player2Wins"); },
         };
         beforeEach(() => {
             jest.spyOn(observer, 'player2Wins').mockImplementation();
