@@ -16,4 +16,18 @@ describe('play function', () => {
             expect(observer.player1Wins).toBeCalled();
         });
     });
+
+    describe('Player 2 wins', () => {
+        const observer = {
+            player1Wins() { console.log("player2Wins"); },
+        };
+        beforeEach(() => {
+            jest.spyOn(observer, 'player2Wins').mockImplementation();
+        });
+
+        it('scissors vs rock', () => {
+            new Requests().play('scissors', 'rock', observer);
+            expect(observer.player2Wins).toBeCalled();
+        });
+    });
 });
