@@ -39,5 +39,10 @@ describe('play function', () => {
             new Requests().play('scissors', 'rock', observer);
             expect(observer.player2Wins).toBeCalled();
         });
+
+        it('rock vs paper', () => {
+            new Requests().play('rock', 'paper', observer);
+            expect(observer.player2Wins).toBeCalled();
+        });
     });
 });
