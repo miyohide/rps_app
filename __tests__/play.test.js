@@ -15,6 +15,16 @@ describe('play function', () => {
             new Requests().play('rock', 'scissors', observer);
             expect(observer.player1Wins).toBeCalled();
         });
+
+        it('scissors vs paper', () => {
+            new Requests().play('scissors', 'paper', observer);
+            expect(observer.player1Wins).toBeCalled();
+        });
+
+        it('paper vs rock', () => {
+            new Requests().play('paper', 'rock', observer);
+            expect(observer.player1Wins).toBeCalled();
+        });
     });
 
     describe('Player 2 wins', () => {
