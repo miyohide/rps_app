@@ -2,6 +2,9 @@
   "name": "web",
   "version": "1.0.0",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
