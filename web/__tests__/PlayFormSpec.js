@@ -1,4 +1,6 @@
 import ReactDOM from 'react-dom';
+import React from 'react';
+import PlayForm from '../src/PlayForm';
 
 describe('WebSpec', function () {
     let domFixture;
@@ -18,6 +20,9 @@ describe('WebSpec', function () {
             domFixture,
         );
 
-        expect(domFixture.innerText).toContain('RPS App');
+        // innerTextではなくtextContentにした理由は
+        // 以下のURLを参照
+        // https://stackoverflow.com/a/47902938
+        expect(domFixture.textContent).toContain('RPS App');
     });
 });
